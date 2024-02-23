@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import Google from "../../../public/google.svg";
+import Github from "../../../public/github.svg";
 
 export default function SignUp() {
   return (
@@ -19,9 +23,29 @@ export default function SignUp() {
             name="email"
             placeholder="Email"
           />
-          <Button className="w-full bg-[#]">Get Started</Button>
+          <Button
+            className="w-full bg-[#e50914]"
+            variant="destructive"
+            type="submit"
+          >
+            Get Started
+          </Button>
         </div>
       </form>
+      <p className="text-sm mt-5 text-gray-500">
+        Already Have an Account?{" "}
+        <Link className="text-white hover:underline" href="/login">
+          Login Now
+        </Link>
+      </p>
+      <div className="flex w-full justify-center items-center gap-x-3 mt-6">
+        <Button variant="outline" size="icon">
+          <Image src={Google} alt="Google Icon" />
+        </Button>
+        <Button variant="outline" size="icon">
+          <Image src={Github} alt="Google Icon" />
+        </Button>
+      </div>
     </div>
   );
 }
