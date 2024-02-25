@@ -12,7 +12,7 @@ export default function Login() {
       <form action="#" method="post">
         <h1 className="text-3xl font-semibold text-white">Login</h1>
         <h1 className="mt-3 text-3l font-light text-white">
-          Watch anywhere. Cancel anytime.
+          Watch TV Shows Online, Watch Movies Online.
         </h1>
         <div className="space-y-4 mt-5">
           <Input
