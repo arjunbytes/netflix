@@ -40,9 +40,6 @@ export default function Login() {
         <Button variant="outline" size="icon">
           <Image src={Google} alt="Google Icon" />
         </Button>
-        <Button variant="outline" size="icon">
-          <Image src={Github} alt="Github Icon" />
-        </Button>
       </div>
     </div>
   );
