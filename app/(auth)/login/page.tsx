@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import Google from "../../../public/google.svg";
 import Github from "../../../public/github.svg";
+import { signIn } from "next-auth/react";
 
 export default function Login() {
   return (
@@ -37,7 +38,7 @@ export default function Login() {
         </Link>
       </p>
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        <Button variant="outline" size="icon">
+        <Button onClick={() => signIn("github")} variant="outline" size="icon">
           <Image src={Google} alt="Google Icon" />
         </Button>
         <Button variant="outline" size="icon">
