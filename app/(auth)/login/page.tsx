@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
-import Google from "../../../public/google.svg";
-import Github from "../../../public/github.svg";
-import { signIn } from "next-auth/react";
+import GithubSignInButton from "@/app/components/GithubSignInButton";
+import GoogleSignInButton from "@/app/components/GoogleSignInButton";
 
 export default function Login() {
   return (
@@ -38,12 +36,8 @@ export default function Login() {
         </Link>
       </p>
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        <Button onClick={() => signIn("github")} variant="outline" size="icon">
-          <Image src={Google} alt="Google Icon" />
-        </Button>
-        <Button variant="outline" size="icon">
-          <Image src={Github} alt="Github Icon" />
-        </Button>
+        <GoogleSignInButton />
+        <GithubSignInButton />
       </div>
     </div>
   );
