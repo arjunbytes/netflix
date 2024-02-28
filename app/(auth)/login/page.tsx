@@ -36,8 +36,6 @@ export default function Login() {
         </Link>
       </p>
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        <GoogleSignInButton />
-        <GithubSignInButton />
       </div>
     </div>
   );
