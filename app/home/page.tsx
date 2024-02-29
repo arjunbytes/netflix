@@ -1,9 +1,3 @@
-import Navbar from "../components/Navbar";
-
 export default function Homepage() {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  );
+  return <div className="m-5">Home Page Children</div>;
 }

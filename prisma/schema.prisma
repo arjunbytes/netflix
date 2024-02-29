@@ -59,3 +59,27 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Movies {
+  id            Int         @id
+  imageLink   String
+  title         String
+  agerestrict           Int
+  duration      Float
+  description      String
+  release       Int
+  videoSource   String
+  genre      String
+  youtubeLink  String
+  WatchLists    WatchList[]
+
+  uploadedAt DateTime @default(now())
+}
+
+model WatchList {
+  id     String @id @default(uuid())
+  userId String
+
+  Movie   Movies? @relation(fields: [movieId], references: [id])
+  movieId Int?
+}
