@@ -7,6 +7,7 @@ import GoogleSignInButton from "@/app/components/GoogleSignInButton";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/utils/auth";
 import { redirect } from "next/navigation";
+import FacebookSignInButton from "@/app/components/FacebookSignInButton";
 
 export default async function Login() {
   const session = await getServerSession(authOptions);
@@ -44,7 +45,7 @@ export default async function Login() {
         </p>
         <div className="flex w-full justify-center items-center gap-x-3 mt-6">
           <GoogleSignInButton />
-          <GithubSignInButton />
+          <FacebookSignInButton />
         </div>
       </div>
     );

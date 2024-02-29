@@ -2,12 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
-import Google from "../../../public/google.svg";
-import Github from "../../../public/github.svg";
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/utils/auth";
+import FacebookSignInButton from "@/app/components/FacebookSignInButton";
+import GoogleSignInButton from "@/app/components/GoogleSignInButton";
 
 export default async function SignUp() {
   const session = await getServerSession(authOptions);
@@ -46,12 +45,8 @@ export default async function SignUp() {
           </Link>
         </p>
         <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-          <Button variant="outline" size="icon">
-            <Image src={Google} alt="Google Icon" />
-          </Button>
-          <Button variant="outline" size="icon">
-            <Image src={Github} alt="Google Icon" />
-          </Button>
+          <GoogleSignInButton />
+          <FacebookSignInButton />
         </div>
       </div>
     );
