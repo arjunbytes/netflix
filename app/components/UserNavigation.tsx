@@ -29,9 +29,9 @@ export default function UserNavigation() {
           {/* Adjusted usage of DropdownMenuLabel with sample props */}
           <DropdownMenuLabel>
             <div className="flex flex-col space-y-1">
-              <p className="text-sm font-medium leading-none">Arjun</p>
+              <p className="text-sm font-medium leading-none">User</p>
               <p className="text-xs leading-none text-muted-foreground">
-                nagarchunan@gmail.com
+                user@gmail.com
               </p>
             </div>
           </DropdownMenuLabel>
