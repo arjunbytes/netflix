@@ -16,7 +16,7 @@ export default async function SignUp() {
   } else {
     return (
       <div className="mt-24 rounded bg-black/75 px-6 py-10 md:mt-0 md:max-w-sm md:px-14">
-        <form action="#" method="post">
+        <form action="/api/auth/signin" method="post">
           <h1 className="text-3xl font-semibold text-white">
             Unlimited movies, TV shows and more
           </h1>
