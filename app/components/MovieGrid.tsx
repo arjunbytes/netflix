@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import prisma from "../utils/db";
+import BannerButtons from "./BannerButtons";
 
 async function getData() {
   try {
@@ -49,8 +50,16 @@ export default async function MovieVideo() {
           {data?.description}
         </p>
         <div className="flex gap-x-3 mt-4">
-          <Button>See more</Button>
-          <Button>Learn More</Button>
+          <BannerButtons
+            age={data?.agerestrict as number}
+            duration={data?.duration as number}
+            id={data?.id as number}
+            overview={data?.description as string}
+            releaseDate={data?.release as number}
+            title={data?.title as string}
+            youtubeUrl={data?.youtubeLink as string}
+            key={data?.id}
+          />
         </div>
       </div>
     </div>
